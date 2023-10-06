@@ -79,13 +79,13 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         ";
         // line 32
         $this->displayBlock('main', $context, $blocks);
-        // line 34
+        // line 35
         echo "        </div>
         <div id=\"message\"></div>
         ";
-        // line 36
+        // line 37
         $this->displayBlock('footer', $context, $blocks);
-        // line 39
+        // line 40
         echo "        </div>
     </body>
     
@@ -210,7 +210,8 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 33
-        echo "        ";
+        echo "        
+        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -219,7 +220,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     }
 
-    // line 36
+    // line 37
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -229,10 +230,10 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 37
-        echo "            ";
-        $this->loadTemplate("partials/__footer.html.twig", "base.html.twig", 37)->display($context);
         // line 38
+        echo "            ";
+        $this->loadTemplate("partials/__footer.html.twig", "base.html.twig", 38)->display($context);
+        // line 39
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -249,7 +250,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  236 => 38,  233 => 37,  223 => 36,  213 => 33,  203 => 32,  193 => 30,  190 => 29,  180 => 28,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 39,  87 => 36,  83 => 34,  81 => 32,  78 => 31,  76 => 28,  71 => 25,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
+        return array (  237 => 39,  234 => 38,  224 => 37,  213 => 33,  203 => 32,  193 => 30,  190 => 29,  180 => 28,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 40,  87 => 37,  83 => 35,  81 => 32,  78 => 31,  76 => 28,  71 => 25,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -286,6 +287,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         {% endblock %}
         <div id=\"main\" class=\"row\" >
         {% block main %}
+        
         {% endblock %}
         </div>
         <div id=\"message\"></div>
@@ -295,6 +297,6 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         </div>
     </body>
     
-</html>", "base.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\wamp\\www\\ProjetKAL\\depot1\\templates\\base.html.twig");
     }
 }
