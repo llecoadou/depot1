@@ -39,6 +39,24 @@ class __TwigTemplate_fe2e048d194ad495bdbf1dc3fa373b15 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "partials/__footer.html.twig"));
 
+        // line 1
+        echo "<!-- ======= Footer ======= -->
+  <footer id=\"footer\">
+    <div class=\"container\">
+      <div class=\"copyright\">
+        &copy; Copyright <strong> </strong>. All Rights Reserved
+      </div>
+      <div class=\"credits\">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+      -->
+        Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -54,11 +72,27 @@ class __TwigTemplate_fe2e048d194ad495bdbf1dc3fa373b15 extends Template
 
     public function getDebugInfo()
     {
-        return array ();
+        return array (  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "partials/__footer.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__footer.html.twig");
+        return new Source("<!-- ======= Footer ======= -->
+  <footer id=\"footer\">
+    <div class=\"container\">
+      <div class=\"copyright\">
+        &copy; Copyright <strong> </strong>. All Rights Reserved
+      </div>
+      <div class=\"credits\">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+      -->
+        Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->", "partials/__footer.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__footer.html.twig");
     }
 }
