@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PanierController extends AbstractController
 {
-    #[Route('/panier', name: 'app_panier')]
+    #[Route('/panier', name: 'panier.index', methods:['GET'])]
     public function index(): Response
     {
         return $this->render('panier/index.html.twig', [

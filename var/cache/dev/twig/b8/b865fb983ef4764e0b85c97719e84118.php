@@ -52,11 +52,26 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
       <nav id=\"navbar\" class=\"navbar\">
         <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#about\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
+          <li><a class=\"nav-link scrollto active\" href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+        echo "\">Accueil</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("apropos.index");
+        echo "\">A propos</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service.index");
+        echo "\">Services</a></li>
+          <li><a class=\"nav-link scrollto \" href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produit.index");
+        echo "\">Produits</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("team.index");
+        echo "\">Team</a></li>
           <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
             <ul>
               <li><a href=\"#\">Drop Down 1</a></li>
@@ -74,7 +89,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
               <li><a href=\"#\">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class=\"nav-link scrollto\" href=\"#contact\">Contact</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"";
+        // line 35
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact.index");
+        echo "\">Contact</a></li>
         </ul>
         <i class=\"bi bi-list mobile-nav-toggle\"></i>
       </nav><!-- .navbar -->
@@ -94,9 +112,14 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
         return "partials/__header.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  94 => 35,  73 => 17,  69 => 16,  65 => 15,  61 => 14,  57 => 13,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -113,11 +136,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
       <nav id=\"navbar\" class=\"navbar\">
         <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#about\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
+          <li><a class=\"nav-link scrollto active\" href=\"{{ path('accueil.index') }}\">Accueil</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"{{ path('apropos.index') }}\">A propos</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"{{ path('service.index') }}\">Services</a></li>
+          <li><a class=\"nav-link scrollto \" href=\"{{ path('produit.index') }}\">Produits</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"{{ path('team.index') }}\">Team</a></li>
           <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
             <ul>
               <li><a href=\"#\">Drop Down 1</a></li>
@@ -135,7 +158,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
               <li><a href=\"#\">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class=\"nav-link scrollto\" href=\"#contact\">Contact</a></li>
+          <li><a class=\"nav-link scrollto\" href=\"{{ path('contact.index') }}\">Contact</a></li>
         </ul>
         <i class=\"bi bi-list mobile-nav-toggle\"></i>
       </nav><!-- .navbar -->

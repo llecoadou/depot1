@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RechercheController extends AbstractController
 {
-    #[Route('/recherche', name: 'app_recherche')]
+    #[Route('/recherche', name: 'recherche.index', methods:['GET'])]
     public function index(): Response
     {
         return $this->render('recherche/index.html.twig', [

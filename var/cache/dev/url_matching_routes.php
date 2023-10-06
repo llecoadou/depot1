@@ -15,7 +15,15 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'accueil.index', '_controller' => 'App\\Controller\\AccueilController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/apropos' => [[['_route' => 'app_apropos', '_controller' => 'App\\Controller\\AproposController::index'], null, null, null, false, false, null]],
+        '/apropos' => [[['_route' => 'apropos.index', '_controller' => 'App\\Controller\\AproposController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/connexion' => [[['_route' => 'connexion.index', '_controller' => 'App\\Controller\\ConnexionController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/contact' => [[['_route' => 'contact.index', '_controller' => 'App\\Controller\\ContactController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/paiement' => [[['_route' => 'paiement.index', '_controller' => 'App\\Controller\\PaiementController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/panier' => [[['_route' => 'panier.index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/produit' => [[['_route' => 'produit.index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/recherche' => [[['_route' => 'recherche.index', '_controller' => 'App\\Controller\\RechercheController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/service' => [[['_route' => 'service.index', '_controller' => 'App\\Controller\\ServiceController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/team' => [[['_route' => 'team.index', '_controller' => 'App\\Controller\\TeamController::index'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

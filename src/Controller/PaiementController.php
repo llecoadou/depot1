@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PaiementController extends AbstractController
 {
-    #[Route('/paiement', name: 'app_paiement')]
+    #[Route('/paiement', name: 'paiement.index', methods:['GET'])]
     public function index(): Response
     {
         return $this->render('paiement/index.html.twig', [

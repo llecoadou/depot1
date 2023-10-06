@@ -376,6 +376,13 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\ProduitController"/>
       </call>
     </service>
+    <service id="App\Controller\RechercheController" class="App\Controller\RechercheController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\RechercheController"/>
+      </call>
+    </service>
     <service id="App\Controller\ServiceController" class="App\Controller\ServiceController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5761,6 +5768,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RechercheController" class="App\Controller\RechercheController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RechercheController" class="App\Controller\RechercheController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RechercheController" class="App\Controller\RechercheController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6706,6 +6716,12 @@
     <service id=".service_locator.jIxfAsi.App\Controller\ProduitController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ProduitController"/>
       <argument>App\Controller\ProduitController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\RechercheController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RechercheController"/>
+      <argument>App\Controller\RechercheController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>

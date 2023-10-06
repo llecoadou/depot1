@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TeamController extends AbstractController
 {
-    #[Route('/team', name: 'app_team')]
+    #[Route('/team', name: 'team.index', methods:['GET'])]
     public function index(): Response
     {
         return $this->render('team/index.html.twig', [
