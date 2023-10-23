@@ -1,0 +1,104 @@
+
+Table Categorie :
+_____________________________________________________________________
+
+INSERT INTO `categorie`(`REFCAT`, `LIBCAT`) VALUES (1,'Alimentaire');
+INSERT INTO `categorie`(`REFCAT`, `LIBCAT`) VALUES (2,'Jouet');
+INSERT INTO `categorie`(`REFCAT`, `LIBCAT`) VALUES (3,'Entretien');
+INSERT INTO `categorie`(`REFCAT`, `LIBCAT`) VALUES (4,'Medical');
+INSERT INTO `categorie`(`REFCAT`, `LIBCAT`) VALUES (5,'Utilitaire');
+_____________________________________________________________________
+
+
+Table Produit:
+_____________________________________________________________________
+
+INSERT INTO `produit`(`REFPROD`, `REFCAT`, `LIBELLEPROD`, `PRIXPROD`, `DESCRIPTION`, `IMAGE`) VALUES (1,1,'Croquette',59.99,'Ingrédient sélectionnés avec soin à l\'aide de vétérinaires nutritionnistes',null);
+INSERT INTO `produit`(`REFPROD`, `REFCAT`, `LIBELLEPROD`, `PRIXPROD`, `DESCRIPTION`, `IMAGE`) VALUES (2,5,'Laisse',7.80,'Sangle en nylon avec fils en caoutchouc tissés, tient bien dans la main et ne glisse pas, idéale pour l\'entraînement des chiens indisciplinés, avec dragonne.',null);
+INSERT INTO `produit`(`REFPROD`, `REFCAT`, `LIBELLEPROD`, `PRIXPROD`, `DESCRIPTION`, `IMAGE`) VALUES (3,4,'Comprimé',17.50,'Facile à administrer',null);
+INSERT INTO `produit`(`REFPROD`, `REFCAT`, `LIBELLEPROD`, `PRIXPROD`, `DESCRIPTION`, `IMAGE`) VALUES (4,2,'Ensemble De Jouets À Mâcher',23.44,'Jouets Pour Lapins',null);
+INSERT INTO `produit`(`REFPROD`, `REFCAT`, `LIBELLEPROD`, `PRIXPROD`, `DESCRIPTION`, `IMAGE`) VALUES (5,2,'Balle',3.78,'idéale pour les jeux de lancer/rapporter',null);
+_____________________________________________________________________
+
+
+Table Utilisateur :
+_____________________________________________________________________
+
+INSERT INTO `utilisateur`(`ID`, `NOMCLI`, `PRENOMCLI`, `MAILCLI`, `PASSCLI`, `ADRCLI`, `CPCLI`, `VILLECLI`) VALUES (1,'Root','Toor','test@test.com','user','1 rue root','53000','Laval');
+INSERT INTO `utilisateur`(`ID`, `NOMCLI`, `PRENOMCLI`, `MAILCLI`, `PASSCLI`, `ADRCLI`, `CPCLI`, `VILLECLI`) VALUES (2,'Dupond','Marc','Marc@dupond.com','Dupond53Marc','13 rue Marc Dupond','53000','Laval');
+INSERT INTO `utilisateur`(`ID`, `NOMCLI`, `PRENOMCLI`, `MAILCLI`, `PASSCLI`, `ADRCLI`, `CPCLI`, `VILLECLI`) VALUES (3,'Dupont','Marque','Marque@dupont.com','Dupont35Marque','31 rue Dupont Marque','35000','Rennnes');
+INSERT INTO `utilisateur`(`ID`, `NOMCLI`, `PRENOMCLI`, `MAILCLI`, `PASSCLI`, `ADRCLI`, `CPCLI`, `VILLECLI`) VALUES (4,'Dupom','Mark','Mark@dupom.com','Dupom05Mark','313 rue Mark Dupom','5000','Upaix');
+INSERT INTO `utilisateur`(`ID`, `NOMCLI`, `PRENOMCLI`, `MAILCLI`, `PASSCLI`, `ADRCLI`, `CPCLI`, `VILLECLI`) VALUES (5,'Dupons','Marquent','Marquent@dupons.com','Dupons03Marquent','436 rue Marquent Dupons','3000','Cusset');
+
+
+Table Animal :
+_____________________________________________________________________
+
+INSERT INTO `animal`(`NUMANIMAL`, `ID`, `NOMANIMAL`, `AGEANIMAL`, `RACEANIMAL`, `PROPRIANIMAL`) VALUES (1,2,'Maidhaurt',2,'Chien','Particulierement con');
+INSERT INTO `animal`(`NUMANIMAL`, `ID`, `NOMANIMAL`, `AGEANIMAL`, `RACEANIMAL`, `PROPRIANIMAL`) VALUES (2,2,'Gharphielde',45,'Chat','Ce nourrit uniquement de lasagne');
+INSERT INTO `animal`(`NUMANIMAL`, `ID`, `NOMANIMAL`, `AGEANIMAL`, `RACEANIMAL`, `PROPRIANIMAL`) VALUES (3,3,'Rogers',35,'Lapin','Très sympatique');
+INSERT INTO `animal`(`NUMANIMAL`, `ID`, `NOMANIMAL`, `AGEANIMAL`, `RACEANIMAL`, `PROPRIANIMAL`) VALUES (4,4,'Moustache',14,'Poisson Rouge','Il est malade');
+INSERT INTO `animal`(`NUMANIMAL`, `ID`, `NOMANIMAL`, `AGEANIMAL`, `RACEANIMAL`, `PROPRIANIMAL`) VALUES (5,5,'Puck',67,'LapinBêlier','Rafole des carottes');
+
+
+Table Mot Clé:
+_____________________________________________________________________
+
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (1,'Chien');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (2,'Chat');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (3,'LapinBêlier');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (4,'Lapin');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (5,'Poisson');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (6,'Malade');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (7,'Alimentation');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (8,'Oiseau');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (9,'Comportement');
+INSERT INTO `motcle`(`NUMMOTCLE`, `LIBMOTCLE`) VALUES (10,'Animal');
+
+
+Table Conseil :
+_____________________________________________________________________
+
+INSERT INTO `conseil`(`NUMCONSEIL`, `DESCCONSEIL`) VALUES (1,'Instaurez une routine pour votre chien. Les chiens aiment la routine');
+INSERT INTO `conseil`(`NUMCONSEIL`, `DESCCONSEIL`) VALUES (2,'Proposez-lui une alimentation saine');
+INSERT INTO `conseil`(`NUMCONSEIL`, `DESCCONSEIL`) VALUES (3,'Si votre animal tombe malade utiliser nos produits.');
+
+Table Commande :
+_____________________________________________________________________
+
+INSERT INTO `commande`(`NUMCOM`, `ID`, `DATECOM`) VALUES (1,1,'2022-12-23');
+INSERT INTO `commande`(`NUMCOM`, `ID`, `DATECOM`) VALUES (2,1,'2023-01-13');
+INSERT INTO `commande`(`NUMCOM`, `ID`, `DATECOM`) VALUES (3,1,'2023-05-25');
+INSERT INTO `commande`(`NUMCOM`, `ID`, `DATECOM`) VALUES (4,1,'2023-09-30');
+INSERT INTO `commande`(`NUMCOM`, `ID`, `DATECOM`) VALUES (5,1,'2023-11-21');
+
+
+Table Rechercher :
+_____________________________________________________________________
+
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (1,1);
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (1,9);
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (2,7);
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (3,10);
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (3,6);
+INSERT INTO `rechercher`(`NUMCONSEIL`, `NUMMOTCLE`) VALUES (3,9);
+
+
+Table Posseder :
+_____________________________________________________________________
+
+INSERT INTO `posseder`(`NUMCOM`, `REFPROD`) VALUES (1,1);
+INSERT INTO `posseder`(`NUMCOM`, `REFPROD`) VALUES (1,2);
+INSERT INTO `posseder`(`NUMCOM`, `REFPROD`) VALUES (2,3);
+INSERT INTO `posseder`(`NUMCOM`, `REFPROD`) VALUES (3,2);
+INSERT INTO `posseder`(`NUMCOM`, `REFPROD`) VALUES (3,4);
+
+
+Table Selectionner :
+_____________________________________________________________________
+
+INSERT INTO `selectionner`(`NUMCONSEIL`, `REFPROD`) VALUES (1,2);
+INSERT INTO `selectionner`(`NUMCONSEIL`, `REFPROD`) VALUES (1,5);
+INSERT INTO `selectionner`(`NUMCONSEIL`, `REFPROD`) VALUES (2,1);
+INSERT INTO `selectionner`(`NUMCONSEIL`, `REFPROD`) VALUES (3,1);
+INSERT INTO `selectionner`(`NUMCONSEIL`, `REFPROD`) VALUES (3,4);
