@@ -94,7 +94,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
           </div>
 
           <div class=\"col-lg-6 content\">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+            <h2>Bienvenue sur notre site KAL</h2>
             <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
 
             <ul>
@@ -279,7 +279,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
           </div>
 
           <div class=\"col-lg-6 content\">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+            <h2>Bienvenue sur notre site KAL</h2>
             <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
 
             <ul>
