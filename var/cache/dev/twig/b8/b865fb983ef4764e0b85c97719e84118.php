@@ -41,64 +41,83 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
         // line 1
         echo "<!-- ======= Header ======= -->
-  <header id=\"header\" class=\"d-flex align-items-center bg-dark\">
-    <div class=\"container d-flex justify-content-between \">
+<header id=\"header\" class=\"d-flex align-items-center bg-dark\">
+\t<div class=\"container d-flex justify-content-between \">
 
-      <div id=\"logo\">
-        <h1><a href=\"index.html\" style=\"color: #2F47A0;\">K<span style=\"color:#CA9165;\">AL</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"\"></a>-->
-      </div>
+\t\t<div id=\"logo\">
+\t\t\t<h1>
+\t\t\t\t<a href=\"index.html\" style=\"color: #2F47A0;\">K<span style=\"color:#CA9165;\">AL</span>
+\t\t\t\t</a>
+\t\t\t</h1>
+\t\t\t<!-- Uncomment below if you prefer to use an image logo -->
+\t\t\t<!-- <a href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"\"></a>-->
+\t\t</div>
 
-      <nav id=\"navbar\" class=\"navbar\">
-        <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
-        echo "\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"";
-        // line 14
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("apropos.index");
-        echo "\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"";
-        // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service.index");
-        echo "\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"";
-        // line 16
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produit.index");
-        echo "\">Produits</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"";
-        // line 17
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("team.index");
-        echo "\">Team</a></li>
-          <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
-            <ul>
-              <li><a href=\"#\">Drop Down 1</a></li>
-              <li class=\"dropdown\"><a href=\"#\"><span>Deep Drop Down</span> <i class=\"bi bi-chevron-right\"></i></a>
-                <ul>
-                  <li><a href=\"#\">Deep Drop Down 1</a></li>
-                  <li><a href=\"#\">Deep Drop Down 2</a></li>
-                  <li><a href=\"#\">Deep Drop Down 3</a></li>
-                  <li><a href=\"#\">Deep Drop Down 4</a></li>
-                  <li><a href=\"#\">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href=\"#\">Drop Down 2</a></li>
-              <li><a href=\"#\">Drop Down 3</a></li>
-              <li><a href=\"#\">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class=\"nav-link scrollto\" href=\"";
-        // line 35
+\t\t<nav id=\"navbar\" class=\"navbar\">
+\t\t\t<ul>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#produit\">Boutique</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
+\t\t\t\t</li>
+\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<span>Drop Down</span>
+\t\t\t\t\t\t<i class=\"bi bi-chevron-down\"></i>
+\t\t\t\t\t</a>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
+\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-right\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 65
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact.index");
-        echo "\">Contact</a></li>
-        </ul>
-        <i class=\"bi bi-list mobile-nav-toggle\"></i>
-      </nav><!-- .navbar -->
+        echo "\">Contact</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
+\t\t</nav>
+\t\t<!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->";
+\t</div>
+</header>
+<!-- End Header -->
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -119,51 +138,85 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-        return array (  94 => 35,  73 => 17,  69 => 16,  65 => 15,  61 => 14,  57 => 13,  43 => 1,);
+        return array (  109 => 65,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!-- ======= Header ======= -->
-  <header id=\"header\" class=\"d-flex align-items-center bg-dark\">
-    <div class=\"container d-flex justify-content-between \">
+<header id=\"header\" class=\"d-flex align-items-center bg-dark\">
+\t<div class=\"container d-flex justify-content-between \">
 
-      <div id=\"logo\">
-        <h1><a href=\"index.html\" style=\"color: #2F47A0;\">K<span style=\"color:#CA9165;\">AL</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"\"></a>-->
-      </div>
+\t\t<div id=\"logo\">
+\t\t\t<h1>
+\t\t\t\t<a href=\"index.html\" style=\"color: #2F47A0;\">K<span style=\"color:#CA9165;\">AL</span>
+\t\t\t\t</a>
+\t\t\t</h1>
+\t\t\t<!-- Uncomment below if you prefer to use an image logo -->
+\t\t\t<!-- <a href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"\"></a>-->
+\t\t</div>
 
-      <nav id=\"navbar\" class=\"navbar\">
-        <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"{{ path('accueil.index') }}\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"{{ path('apropos.index') }}\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"{{ path('service.index') }}\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"{{ path('produit.index') }}\">Produits</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"{{ path('team.index') }}\">Team</a></li>
-          <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
-            <ul>
-              <li><a href=\"#\">Drop Down 1</a></li>
-              <li class=\"dropdown\"><a href=\"#\"><span>Deep Drop Down</span> <i class=\"bi bi-chevron-right\"></i></a>
-                <ul>
-                  <li><a href=\"#\">Deep Drop Down 1</a></li>
-                  <li><a href=\"#\">Deep Drop Down 2</a></li>
-                  <li><a href=\"#\">Deep Drop Down 3</a></li>
-                  <li><a href=\"#\">Deep Drop Down 4</a></li>
-                  <li><a href=\"#\">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href=\"#\">Drop Down 2</a></li>
-              <li><a href=\"#\">Drop Down 3</a></li>
-              <li><a href=\"#\">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class=\"nav-link scrollto\" href=\"{{ path('contact.index') }}\">Contact</a></li>
-        </ul>
-        <i class=\"bi bi-list mobile-nav-toggle\"></i>
-      </nav><!-- .navbar -->
+\t\t<nav id=\"navbar\" class=\"navbar\">
+\t\t\t<ul>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#produit\">Boutique</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
+\t\t\t\t</li>
+\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<span>Drop Down</span>
+\t\t\t\t\t\t<i class=\"bi bi-chevron-down\"></i>
+\t\t\t\t\t</a>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
+\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-right\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{ path('contact.index') }}\">Contact</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
+\t\t</nav>
+\t\t<!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->", "partials/__header.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__header.html.twig");
+\t</div>
+</header>
+<!-- End Header -->
+", "partials/__header.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__header.html.twig");
     }
 }

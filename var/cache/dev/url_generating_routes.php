@@ -19,11 +19,11 @@ return [
     'accueil.index' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
     'apropos.index' => [[], ['_controller' => 'App\\Controller\\AproposController::index'], [], [['text', '/apropos']], [], [], []],
     'connexion.index' => [[], ['_controller' => 'App\\Controller\\ConnexionController::index'], [], [['text', '/connexion']], [], [], []],
+    'conseil.index' => [[], ['_controller' => 'App\\Controller\\ConseilController::index'], [], [['text', '/conseil']], [], [], []],
     'contact.index' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
     'paiement.index' => [[], ['_controller' => 'App\\Controller\\PaiementController::index'], [], [['text', '/paiement']], [], [], []],
     'panier.index' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'produit.index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produit']], [], [], []],
     'recherche.index' => [[], ['_controller' => 'App\\Controller\\RechercheController::index'], [], [['text', '/recherche']], [], [], []],
-    'service.index' => [[], ['_controller' => 'App\\Controller\\ServiceController::index'], [], [['text', '/service']], [], [], []],
     'team.index' => [[], ['_controller' => 'App\\Controller\\TeamController::index'], [], [['text', '/team']], [], [], []],
 ];

@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ServiceController extends AbstractController
+class ConseilController extends AbstractController
 {
-    #[Route('/service', name: 'service.index', methods:['GET'])]
+    #[Route('/conseil', name: 'conseil.index', methods:['GET'])]
     public function index(): Response
     {
-        return $this->render('service/index.html.twig', [
-            'controller_name' => 'ServiceController',
+        return $this->render('conseil/index.html.twig', [
+            'controller_name' => 'ConseilController',
         ]);
     }
 }

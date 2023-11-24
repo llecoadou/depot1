@@ -67,25 +67,25 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         // line 18
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 53
+        // line 26
         echo "    </head>
     <body>
         <div class=\"container-fluid\" id=\"top\">
         ";
-        // line 56
+        // line 29
         $this->displayBlock('header', $context, $blocks);
-        // line 59
+        // line 32
         echo "        <div id=\"main\" class=\"row\" >
         ";
-        // line 60
+        // line 33
         $this->displayBlock('main', $context, $blocks);
-        // line 63
+        // line 36
         echo "        </div>
         <div id=\"message\"></div>
         ";
-        // line 65
+        // line 38
         $this->displayBlock('footer', $context, $blocks);
-        // line 68
+        // line 41
         echo "        </div>
     </body>
     
@@ -167,34 +167,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/js/script.js"), "html", null, true);
         echo "\"></script>
-            <nav id=\"navbar\" class=\"navbar\">
-        <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#about\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
-          <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
-            <ul>
-              <li><a href=\"#\">Drop Down 1</a></li>
-              <li class=\"dropdown\"><a href=\"#\"><span>Deep Drop Down</span> <i class=\"bi bi-chevron-right\"></i></a>
-                <ul>
-                  <li><a href=\"#\">Deep Drop Down 1</a></li>
-                  <li><a href=\"#\">Deep Drop Down 2</a></li>
-                  <li><a href=\"#\">Deep Drop Down 3</a></li>
-                  <li><a href=\"#\">Deep Drop Down 4</a></li>
-                  <li><a href=\"#\">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href=\"#\">Drop Down 2</a></li>
-              <li><a href=\"#\">Drop Down 3</a></li>
-              <li><a href=\"#\">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class=\"nav-link scrollto\" href=\"#contact\">Contact</a></li>
-        </ul>
-        <i class=\"bi bi-list mobile-nav-toggle\"></i>
-      </nav>
+            
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -204,7 +177,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     }
 
-    // line 56
+    // line 29
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -214,10 +187,10 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 57
+        // line 30
         echo "            ";
-        $this->loadTemplate("partials/__header.html.twig", "base.html.twig", 57)->display($context);
-        // line 58
+        $this->loadTemplate("partials/__header.html.twig", "base.html.twig", 30)->display($context);
+        // line 31
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -227,7 +200,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     }
 
-    // line 60
+    // line 33
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -237,7 +210,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
-        // line 61
+        // line 34
         echo "        
         ";
         
@@ -248,7 +221,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     }
 
-    // line 65
+    // line 38
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -258,10 +231,10 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 66
+        // line 39
         echo "            ";
-        $this->loadTemplate("partials/__footer.html.twig", "base.html.twig", 66)->display($context);
-        // line 67
+        $this->loadTemplate("partials/__footer.html.twig", "base.html.twig", 39)->display($context);
+        // line 40
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -278,7 +251,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  265 => 67,  262 => 66,  252 => 65,  241 => 61,  231 => 60,  221 => 58,  218 => 57,  208 => 56,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 68,  87 => 65,  83 => 63,  81 => 60,  78 => 59,  76 => 56,  71 => 53,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
+        return array (  238 => 40,  235 => 39,  225 => 38,  214 => 34,  204 => 33,  194 => 31,  191 => 30,  181 => 29,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 41,  87 => 38,  83 => 36,  81 => 33,  78 => 32,  76 => 29,  71 => 26,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -306,34 +279,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"></script>
             <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"></script>
             <script src=\"{{ asset('asset/js/script.js') }}\"></script>
-            <nav id=\"navbar\" class=\"navbar\">
-        <ul>
-          <li><a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#about\">A propos</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
-          <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
-          <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
-          <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
-            <ul>
-              <li><a href=\"#\">Drop Down 1</a></li>
-              <li class=\"dropdown\"><a href=\"#\"><span>Deep Drop Down</span> <i class=\"bi bi-chevron-right\"></i></a>
-                <ul>
-                  <li><a href=\"#\">Deep Drop Down 1</a></li>
-                  <li><a href=\"#\">Deep Drop Down 2</a></li>
-                  <li><a href=\"#\">Deep Drop Down 3</a></li>
-                  <li><a href=\"#\">Deep Drop Down 4</a></li>
-                  <li><a href=\"#\">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href=\"#\">Drop Down 2</a></li>
-              <li><a href=\"#\">Drop Down 3</a></li>
-              <li><a href=\"#\">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class=\"nav-link scrollto\" href=\"#contact\">Contact</a></li>
-        </ul>
-        <i class=\"bi bi-list mobile-nav-toggle\"></i>
-      </nav>
+            
         {% endblock %}
     </head>
     <body>
@@ -353,6 +299,6 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         </div>
     </body>
     
-</html>", "base.html.twig", "C:\\wamp\\www\\ProjetKAL\\depot1\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\base.html.twig");
     }
 }
