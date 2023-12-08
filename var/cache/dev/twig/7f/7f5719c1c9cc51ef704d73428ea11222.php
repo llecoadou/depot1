@@ -90,17 +90,21 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
       <div class=\"container\" data-aos=\"fade-up\">
         <div class=\"row\">
           <div class=\"col-lg-6 about-img\">
-            <img src=\"assets/img/about-img.jpg\" alt=\"\">
+            <img src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/img/Logo.png"), "html", null, true);
+        echo "\" style=\"margin-left:50px;\" />
+            
           </div>
 
           <div class=\"col-lg-6 content\">
             <h2>Bienvenue sur notre site KAL</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien s'occuper de vos animaux de compagnies.</h3>
 
             <ul>
-              <li><i class=\"bi bi-check-circle\"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class=\"bi bi-check-circle\"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class=\"bi bi-check-circle\"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Des produits de qualité supérieur.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Des conseils adapté à votre animal.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Une équipe qualifié et disponible pour vous 24H/24H car la santé de vos animaux ne peut pas attendre.</li>
             </ul>
 
           </div>
@@ -260,7 +264,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -275,17 +279,18 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
       <div class=\"container\" data-aos=\"fade-up\">
         <div class=\"row\">
           <div class=\"col-lg-6 about-img\">
-            <img src=\"assets/img/about-img.jpg\" alt=\"\">
+            <img src=\"{{asset('asset/img/Logo.png')}}\" style=\"margin-left:50px;\" />
+            
           </div>
 
           <div class=\"col-lg-6 content\">
             <h2>Bienvenue sur notre site KAL</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien s'occuper de vos animaux de compagnies.</h3>
 
             <ul>
-              <li><i class=\"bi bi-check-circle\"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class=\"bi bi-check-circle\"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class=\"bi bi-check-circle\"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Des produits de qualité supérieur.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Des conseils adapté à votre animal.</li>
+              <li><i class=\"bi bi-check-circle\"></i> Une équipe qualifié et disponible pour vous 24H/24H car la santé de vos animaux ne peut pas attendre.</li>
             </ul>
 
           </div>
@@ -425,6 +430,6 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
     </section><!-- End Testimonials Section -->
 
 {% endblock %}
-", "accueil/index.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\accueil\\index.html.twig");
+", "accueil/index.html.twig", "C:\\wamp64\\www\\ProjetKAL\\depot1\\templates\\accueil\\index.html.twig");
     }
 }

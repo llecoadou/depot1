@@ -211,8 +211,10 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 34
-        echo "        
-        ";
+        echo "            ";
+        $this->loadTemplate("apropos/__index.html.twig", "base.html.twig", 34)->display($context);
+        // line 35
+        echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -251,7 +253,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  238 => 40,  235 => 39,  225 => 38,  214 => 34,  204 => 33,  194 => 31,  191 => 30,  181 => 29,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 41,  87 => 38,  83 => 36,  81 => 33,  78 => 32,  76 => 29,  71 => 26,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
+        return array (  240 => 40,  237 => 39,  227 => 38,  217 => 35,  214 => 34,  204 => 33,  194 => 31,  191 => 30,  181 => 29,  168 => 23,  160 => 19,  150 => 18,  137 => 15,  131 => 13,  121 => 12,  102 => 5,  89 => 41,  87 => 38,  83 => 36,  81 => 33,  78 => 32,  76 => 29,  71 => 26,  68 => 18,  66 => 12,  60 => 8,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -289,7 +291,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         {% endblock %}
         <div id=\"main\" class=\"row\" >
         {% block main %}
-        
+            {% include \"apropos/__index.html.twig\" %}
         {% endblock %}
         </div>
         <div id=\"message\"></div>
@@ -299,6 +301,6 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         </div>
     </body>
     
-</html>", "base.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\wamp64\\www\\ProjetKAL\\depot1\\templates\\base.html.twig");
     }
 }

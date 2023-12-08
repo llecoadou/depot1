@@ -62,7 +62,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#produit\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
@@ -165,7 +165,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#produit\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
@@ -217,6 +217,6 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t</div>
 </header>
 <!-- End Header -->
-", "partials/__header.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__header.html.twig");
+", "partials/__header.html.twig", "C:\\wamp64\\www\\ProjetKAL\\depot1\\templates\\partials\\__header.html.twig");
     }
 }
