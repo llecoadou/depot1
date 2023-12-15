@@ -58,7 +58,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
@@ -66,14 +66,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
-        // line 31
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact.index");
-        echo "\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
@@ -97,14 +94,9 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
         return "partials/__header.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  75 => 31,  43 => 1,);
+        return array (  43 => 1,);
     }
 
     public function getSourceContext()
@@ -127,7 +119,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
@@ -135,11 +127,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{ path('contact.index') }}\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
