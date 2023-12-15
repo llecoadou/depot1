@@ -21,7 +21,7 @@ return [
         '/contact' => [[['_route' => 'contact.index', '_controller' => 'App\\Controller\\ContactController::index'], null, ['GET' => 0], null, false, false, null]],
         '/paiement' => [[['_route' => 'paiement.index', '_controller' => 'App\\Controller\\PaiementController::index'], null, ['GET' => 0], null, false, false, null]],
         '/panier' => [[['_route' => 'panier.index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/produit' => [[['_route' => 'produit.index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/boutique' => [[['_route' => 'boutique.index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
         '/recherche' => [[['_route' => 'recherche.index', '_controller' => 'App\\Controller\\RechercheController::index'], null, ['GET' => 0], null, false, false, null]],
         '/team' => [[['_route' => 'team.index', '_controller' => 'App\\Controller\\TeamController::index'], null, ['GET' => 0], null, false, false, null]],
     ],

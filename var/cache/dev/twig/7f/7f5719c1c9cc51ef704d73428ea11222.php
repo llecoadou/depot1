@@ -116,7 +116,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
     <section id=\"services\">
       <div class=\"container\" data-aos=\"fade-up\">
         <div class=\"section-header\">
-          <h2>Boutiques</h2>
+          <h2 href=\"#boutique\">Boutiques</h2>
           <p>Voici la boutique de notre site internet</p>
         </div>
 
@@ -373,7 +373,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
     <section id=\"services\">
       <div class=\"container\" data-aos=\"fade-up\">
         <div class=\"section-header\">
-          <h2>Boutiques</h2>
+          <h2 href=\"#boutique\">Boutiques</h2>
           <p>Voici la boutique de notre site internet</p>
         </div>
 
