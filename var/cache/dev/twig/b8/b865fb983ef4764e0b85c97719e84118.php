@@ -72,6 +72,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
 \t\t\t\t</li>
+\t\t\t\t
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
+\t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
 \t\t</nav>
@@ -132,6 +136,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
+\t\t\t\t</li>
+\t\t\t\t
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
