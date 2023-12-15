@@ -62,24 +62,24 @@ class Produit
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="Conseil", mappedBy="refprod")
+     * @ORM\ManyToMany(targetEntity="Commande", mappedBy="refprod")
      */
-    private $numconseil = array();
+    private $numcom = array();
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="Commande", mappedBy="refprod")
+     * @ORM\ManyToMany(targetEntity="Conseil", mappedBy="refprod")
      */
-    private $numcom = array();
+    private $numconseil = array();
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->numconseil = new \Doctrine\Common\Collections\ArrayCollection();
         $this->numcom = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->numconseil = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 }
