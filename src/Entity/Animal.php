@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Animal
  *
  * @ORM\Table(name="animal", indexes={@ORM\Index(name="I_FK_ANIMAL_UTILISATEUR", columns={"ID"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\AnimalRepository")
  */
 class Animal
 {
@@ -58,6 +58,71 @@ class Animal
      * })
      */
     private $id;
+
+    public function getNumanimal(): ?int
+    {
+        return $this->numanimal;
+    }
+
+    public function getNomanimal(): ?string
+    {
+        return $this->nomanimal;
+    }
+
+    public function setNomanimal(?string $nomanimal): static
+    {
+        $this->nomanimal = $nomanimal;
+
+        return $this;
+    }
+
+    public function getAgeanimal(): ?int
+    {
+        return $this->ageanimal;
+    }
+
+    public function setAgeanimal(?int $ageanimal): static
+    {
+        $this->ageanimal = $ageanimal;
+
+        return $this;
+    }
+
+    public function getRaceanimal(): ?string
+    {
+        return $this->raceanimal;
+    }
+
+    public function setRaceanimal(?string $raceanimal): static
+    {
+        $this->raceanimal = $raceanimal;
+
+        return $this;
+    }
+
+    public function getProprianimal(): ?string
+    {
+        return $this->proprianimal;
+    }
+
+    public function setProprianimal(?string $proprianimal): static
+    {
+        $this->proprianimal = $proprianimal;
+
+        return $this;
+    }
+
+    public function getId(): ?Utilisateur
+    {
+        return $this->id;
+    }
+
+    public function setId(?Utilisateur $id): static
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
 
 }

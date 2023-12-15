@@ -2,31 +2,66 @@
 
 namespace App\Repository;
 
-use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Categorie;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * Categorie
+ * @extends ServiceEntityRepository<Categorie>
  *
- * @ORM\Table(name="categorie")
- * @ORM\Entity
+ * @method Categorie|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Categorie|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Categorie[]    findAll()
+ * @method Categorie[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class Categorie
+class CategorieRepository extends ServiceEntityRepository
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="REFCAT", type="bigint", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $refcat;
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, Categorie::class);
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="LIBCAT", type="string", length=255, nullable=true, options={"fixed"=true})
-     */
-    private $libcat;
+    public function save(Categorie $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
 
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
 
+    public function remove(Categorie $entity, bool $flush = false): void
+    {
+        //dd($this->getEntityManager());
+        $this->getEntityManager()->remove($entity);
+        
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+//    /**
+//     * @return Categorie[] Returns an array of Categorie objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('c.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
+
+//    public function findOneBySomeField($value): ?Categorie
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
 }
