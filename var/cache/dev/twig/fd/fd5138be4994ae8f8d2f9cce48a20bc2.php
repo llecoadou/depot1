@@ -93,6 +93,6 @@ class __TwigTemplate_fe2e048d194ad495bdbf1dc3fa373b15 extends Template
         Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->", "partials/__footer.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__footer.html.twig");
+  </footer><!-- End Footer -->", "partials/__footer.html.twig", "C:\\wamp64\\www\\ProjetKAL\\depot1\\templates\\partials\\__footer.html.twig");
     }
 }
