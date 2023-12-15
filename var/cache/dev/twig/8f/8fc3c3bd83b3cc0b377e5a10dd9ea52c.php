@@ -75,7 +75,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         // line 29
         $this->displayBlock('header', $context, $blocks);
         // line 32
-        echo "        <div id=\"main\" class=\"row\" >
+        echo "        <div id=\"main\" style=\"text-align:center;\">
         ";
         // line 33
         $this->displayBlock('main', $context, $blocks);
@@ -289,7 +289,7 @@ class __TwigTemplate_daa0b547cd44608b66bd290b3ac8dac3 extends Template
         {% block header %}
             {% include \"partials/__header.html.twig\" %}
         {% endblock %}
-        <div id=\"main\" class=\"row\" >
+        <div id=\"main\" style=\"text-align:center;\">
         {% block main %}
             {% include \"apropos/__index.html.twig\" %}
         {% endblock %}
