@@ -99,8 +99,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
 
           <div class=\"col-lg-6 content\">
             <h2>Bienvenue sur notre site KAL</h2>
-            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien s'occuper de vos animaux de compagnies.</h3>
-
+            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien   s'occuper de vos animaux de compagnies.</h3>
             <ul>
               <li><i class=\"bi bi-check-circle\"></i> Des produits de qualité supérieur.</li>
               <li><i class=\"bi bi-check-circle\"></i> Des conseils adapté à votre animal.</li>
@@ -285,8 +284,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
 
           <div class=\"col-lg-6 content\">
             <h2>Bienvenue sur notre site KAL</h2>
-            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien s'occuper de vos animaux de compagnies.</h3>
-
+            <h3>Ici, vous trouverez tout ce qu'il vous faut pour bien   s'occuper de vos animaux de compagnies.</h3>
             <ul>
               <li><i class=\"bi bi-check-circle\"></i> Des produits de qualité supérieur.</li>
               <li><i class=\"bi bi-check-circle\"></i> Des conseils adapté à votre animal.</li>

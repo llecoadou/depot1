@@ -58,9 +58,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
-\t\t\t\t</li>
+\t\t\t\t
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
@@ -70,42 +68,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t<span>Drop Down</span>
-\t\t\t\t\t\t<i class=\"bi bi-chevron-down\"></i>
-\t\t\t\t\t</a>
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
-\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-right\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</li>
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
-        // line 65
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact.index");
         echo "\">Contact</a>
 \t\t\t\t</li>
@@ -138,7 +104,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-        return array (  109 => 65,  43 => 1,);
+        return array (  75 => 31,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -161,9 +127,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
 \t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#about\">A propos</a>
-\t\t\t\t</li>
+\t\t\t\t
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
@@ -173,39 +137,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#jsp\">Team</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t<span>Drop Down</span>
-\t\t\t\t\t\t<i class=\"bi bi-chevron-down\"></i>
-\t\t\t\t\t</a>
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
-\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-right\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</li>
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{ path('contact.index') }}\">Contact</a>
 \t\t\t\t</li>
