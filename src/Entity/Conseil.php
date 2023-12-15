@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Conseil
  *
  * @ORM\Table(name="conseil")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ConseilRepository")
  */
 class Conseil
 {
@@ -65,6 +67,71 @@ class Conseil
     {
         $this->nummotcle = new \Doctrine\Common\Collections\ArrayCollection();
         $this->refprod = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function getNumconseil(): ?int
+    {
+        return $this->numconseil;
+    }
+
+    public function getDescconseil(): ?string
+    {
+        return $this->descconseil;
+    }
+
+    public function setDescconseil(?string $descconseil): static
+    {
+        $this->descconseil = $descconseil;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Motcle>
+     */
+    public function getNummotcle(): Collection
+    {
+        return $this->nummotcle;
+    }
+
+    public function addNummotcle(Motcle $nummotcle): static
+    {
+        if (!$this->nummotcle->contains($nummotcle)) {
+            $this->nummotcle->add($nummotcle);
+        }
+
+        return $this;
+    }
+
+    public function removeNummotcle(Motcle $nummotcle): static
+    {
+        $this->nummotcle->removeElement($nummotcle);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Produit>
+     */
+    public function getRefprod(): Collection
+    {
+        return $this->refprod;
+    }
+
+    public function addRefprod(Produit $refprod): static
+    {
+        if (!$this->refprod->contains($refprod)) {
+            $this->refprod->add($refprod);
+        }
+
+        return $this;
+    }
+
+    public function removeRefprod(Produit $refprod): static
+    {
+        $this->refprod->removeElement($refprod);
+
+        return $this;
     }
 
 }

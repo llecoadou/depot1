@@ -77,7 +77,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 35
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexion.index");
+        echo "\">Connexion</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
@@ -108,7 +111,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  68 => 24,  43 => 1,);
+=======
+        return array (  79 => 35,  43 => 1,);
+>>>>>>> 0f18af3454f195c9eff8b18f6acd7262f8022835
     }
 
     public function getSourceContext()
@@ -147,7 +154,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('connexion.index')}}\">Connexion</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
