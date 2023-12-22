@@ -63,7 +63,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("boutique.index");
+        echo "\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"";
@@ -130,7 +133,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-        return array (  109 => 35,  97 => 31,  85 => 27,  79 => 24,  68 => 21,  61 => 17,  43 => 1,);
+        return array (  104 => 35,  92 => 31,  80 => 27,  74 => 24,  68 => 21,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -151,11 +154,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"{{path('accueil.index')}}\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('boutique.index')}}\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"{{path('conseil.index')}}\">Astuces</a>
@@ -179,6 +182,6 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t</div>
 </header>
 <!-- End Header -->
-", "partials/__header.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__header.html.twig");
+", "partials/__header.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__header.html.twig");
     }
 }
