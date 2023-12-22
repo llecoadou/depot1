@@ -4,6 +4,8 @@ namespace App\Security;
 
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use App\Entity\Utilisateur;
+use App\Repository\UtilisateurRepository;
 
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -106,7 +108,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function verifierUtilisateur(UtilisateurRepository $utilisateurRepository): ?bool
     {
         //Todo
-        $leUser = $utilisateurRepository->findOneBy(['login'=>$this->username]);
+        $leUser = $utilisateurRepository->findOneBy(['nomcli'=>$this->username]);
 
         if(null != $leUser) {
             $this->setUtilisateur($leUser);

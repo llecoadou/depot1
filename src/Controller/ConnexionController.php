@@ -7,18 +7,18 @@ use App\Security\UserProvider;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Security\User;
+
 
 class ConnexionController extends AbstractController
 {
     #[Route('/connexion', name: 'connexion.index', methods:['GET'])]
-    public function index(): Response
+    public function index(UtilisateurRepository $utilisateurRepository): Response
     {
         $leUser = new User();
         $leUser->setUsername('test@test1.fr');
-        $leUser->verifierPersonne($personneRepository);
+        $leUser->verifierUtilisateur($utilisateurRepository);
         dd($leUser);
-        return $this->render('connexion/index.html.twig', [
-            'controller_name' => 'ConnexionController',
-        ]);
+        return $this->render('connexion/index.html.twig');
     }
 }
