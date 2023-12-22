@@ -12,7 +12,7 @@ class ConseilController extends AbstractController
     public function index(): Response
     {
         return $this->render('conseil/index.html.twig', [
-            'controller_name' => 'ConseilController',
+            'controller_name' => 'ConseilController','modifHeader'=>1
         ]);
     }
 }

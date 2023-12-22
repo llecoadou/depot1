@@ -56,11 +56,22 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+        echo "\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 21
+        if (array_key_exists("modifHeader", $context)) {
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+            echo "#boutique";
+        } else {
+            echo " #boutique ";
+        }
+        echo "\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"";
@@ -69,11 +80,27 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
         echo "\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 27
+        if (array_key_exists("modifHeader", $context)) {
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+            echo "#testimonials";
+        } else {
+            echo " #testimonials ";
+        }
+        echo "\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 31
+        if (array_key_exists("modifHeader", $context)) {
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+            echo "#contact";
+        } else {
+            echo " #contact ";
+        }
+        echo "\">Contact</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
@@ -111,11 +138,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
-        return array (  68 => 24,  43 => 1,);
-=======
-        return array (  79 => 35,  43 => 1,);
->>>>>>> 0f18af3454f195c9eff8b18f6acd7262f8022835
+        return array (  109 => 35,  97 => 31,  85 => 27,  79 => 24,  68 => 21,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -136,21 +159,21 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"{{path('accueil.index')}}\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#boutique{% else %} #boutique {% endif %}\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"{{path('conseil.index')}}\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#testimonials{% else %} #testimonials {% endif %}\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#contact{% else %} #contact {% endif %}\">Contact</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
