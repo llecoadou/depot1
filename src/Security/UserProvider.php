@@ -8,9 +8,16 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
+use App\Repository\UtilisateurRepository;
 
 class UserProvider implements UserProviderInterface, PasswordUpgraderInterface
 {
+    private $utilisateur;
+
+    public function __construct(UtilisateurRepository $utilisateurRepository)
+    {
+        $this->utilisateur = $utilisateurRepository;
+    }
     /**
      * Symfony calls this method if you use features like switch_user
      * or remember_me.
@@ -26,6 +33,16 @@ class UserProvider implements UserProviderInterface, PasswordUpgraderInterface
         // The $identifier argument may not actually be a username:
         // it is whatever value is being returned by the getUserIdentifier()
         // method in your User class.
+
+        $leUser = new User();
+        $leUser->setUsername($identifier);
+        $leUser->verifierUtilisateur($this->utilisateur);
+
+        $plainPassword = password_hash($leUser->getPassword(), PASSWORD_BCRYPT);
+        $leUser->setPassword($plainPassword);
+
+        return $leUser;
+
         throw new \Exception('TODO: fill in loadUserByIdentifier() inside '.__FILE__);
     }
 
@@ -51,12 +68,13 @@ class UserProvider implements UserProviderInterface, PasswordUpgraderInterface
     public function refreshUser(UserInterface $user): UserInterface
     {
         if (!$user instanceof User) {
-            throw new UnsupportedUserException(sprintf('Invalid user class "%s".', $user::class));
+            throw new UnsupportedUserException(sprintf('Invalid user class "%s".', get_class($user)));
         }
+        return $user;
 
         // Return a User object after making sure its data is "fresh".
         // Or throw a UsernameNotFoundException if the user no longer exists.
-        throw new \Exception('TODO: fill in refreshUser() inside '.__FILE__);
+        //throw new \Exception('TODO: fill in refreshUser() inside '.__FILE__);
     }
 
     /**
