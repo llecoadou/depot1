@@ -24,6 +24,9 @@ return [
     'paiement.index' => [[], ['_controller' => 'App\\Controller\\PaiementController::index'], [], [['text', '/paiement']], [], [], []],
     'panier.index' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'boutique.index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/boutique']], [], [], []],
+    'profil.index' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],
     'recherche.index' => [[], ['_controller' => 'App\\Controller\\RechercheController::index'], [], [['text', '/recherche']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'team.index' => [[], ['_controller' => 'App\\Controller\\TeamController::index'], [], [['text', '/team']], [], [], []],
 ];

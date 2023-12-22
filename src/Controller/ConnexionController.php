@@ -15,10 +15,13 @@ class ConnexionController extends AbstractController
     #[Route('/connexion', name: 'connexion.index', methods:['GET'])]
     public function index(UtilisateurRepository $utilisateurRepository): Response
     {
-        $leUser = new User();
+        /*$leUser = new User();
         $leUser->setUsername('test@test1.fr');
         $leUser->verifierUtilisateur($utilisateurRepository);
-        dd($leUser);
+        dd($leUser);*/
+        $leUser = new UserProvider($utilisateurRepository);
+        $leUser->loadUserByIdentifier('test@test1.fr');
+        //dd($leUser);
         return $this->render('connexion/index.html.twig');
     }
 }
