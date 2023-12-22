@@ -56,23 +56,48 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+        echo "\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("boutique.index");
+        echo "\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
+\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("conseil.index");
+        echo "\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 27
+        if (array_key_exists("modifHeader", $context)) {
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+            echo "#testimonials";
+        } else {
+            echo " #testimonials ";
+        }
+        echo "\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 31
+        if (array_key_exists("modifHeader", $context)) {
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+            echo "#contact";
+        } else {
+            echo " #contact ";
+        }
+        echo "\">Contact</a>
 \t\t\t\t</li>
-\t\t\t\t
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
         // line 35
@@ -108,7 +133,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-        return array (  79 => 35,  43 => 1,);
+        return array (  104 => 35,  92 => 31,  80 => 27,  74 => 24,  68 => 21,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -129,23 +154,23 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"{{path('accueil.index')}}\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('boutique.index')}}\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
+\t\t\t\t\t<a class=\"nav-link scrollto \" href=\"{{path('conseil.index')}}\">Astuces</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#testimonials\">Team</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#testimonials{% else %} #testimonials {% endif %}\">Team</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#contact\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#contact{% else %} #contact {% endif %}\">Contact</a>
 \t\t\t\t</li>
-\t\t\t\t
+
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('connexion.index')}}\">Connexion</a>
 \t\t\t\t</li>
@@ -157,6 +182,6 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t</div>
 </header>
 <!-- End Header -->
-", "partials/__header.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__header.html.twig");
+", "partials/__header.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__header.html.twig");
     }
 }

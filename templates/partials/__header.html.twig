@@ -14,23 +14,23 @@
 		<nav id="navbar" class="navbar">
 			<ul>
 				<li>
-					<a class="nav-link scrollto active" href="#hero">Accueil</a>
+					<a class="nav-link scrollto active" href="{{path('accueil.index')}}">Accueil</a>
 				</li>
 
 				<li>
-					<a class="nav-link scrollto" href="#boutique">Boutique</a>
+					<a class="nav-link scrollto" href="{{path('boutique.index')}}">Boutique</a>
 				</li>
 				<li>
-					<a class="nav-link scrollto " href="#conseil">Astuces</a>
+					<a class="nav-link scrollto " href="{{path('conseil.index')}}">Astuces</a>
 				</li>
 				<li>
-					<a class="nav-link scrollto" href="#testimonials">Team</a>
+					<a class="nav-link scrollto" href="{% if modifHeader is defined %}{{path('accueil.index')}}#testimonials{% else %} #testimonials {% endif %}">Team</a>
 				</li>
 
 				<li>
-					<a class="nav-link scrollto" href="#contact">Contact</a>
+					<a class="nav-link scrollto" href="{% if modifHeader is defined %}{{path('accueil.index')}}#contact{% else %} #contact {% endif %}">Contact</a>
 				</li>
-				
+
 				<li>
 					<a class="nav-link scrollto" href="{{path('connexion.index')}}">Connexion</a>
 				</li>

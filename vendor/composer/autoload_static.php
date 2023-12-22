@@ -566,6 +566,8 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
         'App\\Entity\\Produit' => __DIR__ . '/../..' . '/src/Entity/Produit.php',
         'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Security\\User' => __DIR__ . '/../..' . '/src/Security/User.php',
+        'App\\Security\\UserProvider' => __DIR__ . '/../..' . '/src/Security/UserProvider.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
