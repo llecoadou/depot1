@@ -63,15 +63,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
-        // line 21
-        if (array_key_exists("modifHeader", $context)) {
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
-            echo "#boutique";
-        } else {
-            echo " #boutique ";
-        }
-        echo "\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"";
@@ -159,11 +151,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"{{path('accueil.index')}}\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#boutique{% else %} #boutique {% endif %}\">Boutique</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"{{path('conseil.index')}}\">Astuces</a>
@@ -187,6 +179,6 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t</div>
 </header>
 <!-- End Header -->
-", "partials/__header.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\partials\\__header.html.twig");
+", "partials/__header.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__header.html.twig");
     }
 }

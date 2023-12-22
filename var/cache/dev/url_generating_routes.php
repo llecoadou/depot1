@@ -23,7 +23,7 @@ return [
     'contact.index' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
     'paiement.index' => [[], ['_controller' => 'App\\Controller\\PaiementController::index'], [], [['text', '/paiement']], [], [], []],
     'panier.index' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
-    'produit.index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produit']], [], [], []],
+    'boutique.index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/boutique']], [], [], []],
     'recherche.index' => [[], ['_controller' => 'App\\Controller\\RechercheController::index'], [], [['text', '/recherche']], [], [], []],
     'team.index' => [[], ['_controller' => 'App\\Controller\\TeamController::index'], [], [['text', '/team']], [], [], []],
 ];
