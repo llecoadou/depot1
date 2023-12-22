@@ -2,62 +2,66 @@
 
 namespace App\Repository;
 
-use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Animal;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * Animal
+ * @extends ServiceEntityRepository<Animal>
  *
- * @ORM\Table(name="animal", indexes={@ORM\Index(name="I_FK_ANIMAL_UTILISATEUR", columns={"ID"})})
- * @ORM\Entity
+ * @method Animal|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Animal|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Animal[]    findAll()
+ * @method Animal[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class Animal
+class AnimalRepository extends ServiceEntityRepository
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="NUMANIMAL", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $numanimal;
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, Animal::class);
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="NOMANIMAL", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $nomanimal;
+    public function save(Animal $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
 
-    /**
-     * @var int|null
-     *
-     * @ORM\Column(name="AGEANIMAL", type="integer", nullable=true)
-     */
-    private $ageanimal;
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="RACEANIMAL", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $raceanimal;
+    public function remove(Animal $entity, bool $flush = false): void
+    {
+        //dd($this->getEntityManager());
+        $this->getEntityManager()->remove($entity);
+        
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="PROPRIANIMAL", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $proprianimal;
+//    /**
+//     * @return Animal[] Returns an array of Animal objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('a')
+//            ->andWhere('a.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('a.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
 
-    /**
-     * @var \Utilisateur
-     *
-     * @ORM\ManyToOne(targetEntity="Utilisateur")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ID", referencedColumnName="ID")
-     * })
-     */
-    private $id;
-
-
+//    public function findOneBySomeField($value): ?Animal
+//    {
+//        return $this->createQueryBuilder('a')
+//            ->andWhere('a.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
 }

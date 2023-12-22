@@ -56,11 +56,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a href=\"boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
@@ -74,7 +74,10 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
+        // line 35
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexion.index");
+        echo "\">Connexion</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
@@ -98,9 +101,14 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
         return "partials/__header.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  79 => 35,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -121,11 +129,11 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t<ul>
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"#hero\">Accueil</a>
+\t\t\t\t\t<a class=\"nav-link scrollto active\" href=\"\">Accueil</a>
 \t\t\t\t</li>
 
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#boutique\">Boutique</a>
+\t\t\t\t\t<a href=\"boutique\">Boutique</a>
 \t\t\t\t</li>
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto \" href=\"#conseil\">Astuces</a>
@@ -139,7 +147,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"#connexion\">Connexion</a>
+\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('connexion.index')}}\">Connexion</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
@@ -149,6 +157,6 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t</div>
 </header>
 <!-- End Header -->
-", "partials/__header.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\partials\\__header.html.twig");
+", "partials/__header.html.twig", "C:\\wamp64\\www\\ProjetKAL\\depot1\\templates\\partials\\__header.html.twig");
     }
 }

@@ -2,13 +2,16 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Produit
  *
  * @ORM\Table(name="produit", indexes={@ORM\Index(name="I_FK_PRODUIT_CATEGORIE", columns={"REFCAT"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ProduitRepository")
  */
 class Produit
 {
@@ -80,6 +83,125 @@ class Produit
     {
         $this->numconseil = new \Doctrine\Common\Collections\ArrayCollection();
         $this->numcom = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function getRefprod(): ?string
+    {
+        return $this->refprod;
+    }
+
+    public function getLibelleprod(): ?string
+    {
+        return $this->libelleprod;
+    }
+
+    public function setLibelleprod(?string $libelleprod): static
+    {
+        $this->libelleprod = $libelleprod;
+
+        return $this;
+    }
+
+    public function getPrixprod(): ?int
+    {
+        return $this->prixprod;
+    }
+
+    public function setPrixprod(?int $prixprod): static
+    {
+        $this->prixprod = $prixprod;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): static
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image): static
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getRefcat(): ?Categorie
+    {
+        return $this->refcat;
+    }
+
+    public function setRefcat(?Categorie $refcat): static
+    {
+        $this->refcat = $refcat;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Conseil>
+     */
+    public function getNumconseil(): Collection
+    {
+        return $this->numconseil;
+    }
+
+    public function addNumconseil(Conseil $numconseil): static
+    {
+        if (!$this->numconseil->contains($numconseil)) {
+            $this->numconseil->add($numconseil);
+            $numconseil->addRefprod($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNumconseil(Conseil $numconseil): static
+    {
+        if ($this->numconseil->removeElement($numconseil)) {
+            $numconseil->removeRefprod($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Commande>
+     */
+    public function getNumcom(): Collection
+    {
+        return $this->numcom;
+    }
+
+    public function addNumcom(Commande $numcom): static
+    {
+        if (!$this->numcom->contains($numcom)) {
+            $this->numcom->add($numcom);
+            $numcom->addRefprod($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNumcom(Commande $numcom): static
+    {
+        if ($this->numcom->removeElement($numcom)) {
+            $numcom->removeRefprod($this);
+        }
+
+        return $this;
     }
 
 }

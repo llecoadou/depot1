@@ -2,69 +2,66 @@
 
 namespace App\Repository;
 
-use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Conseil;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * Conseil
+ * @extends ServiceEntityRepository<Conseil>
  *
- * @ORM\Table(name="conseil")
- * @ORM\Entity
+ * @method Conseil|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Conseil|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Conseil[]    findAll()
+ * @method Conseil[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class Conseil
+class ConseilRepository extends ServiceEntityRepository
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="NUMCONSEIL", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $numconseil;
-
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="DESCCONSEIL", type="string", length=255, nullable=true, options={"fixed"=true})
-     */
-    private $descconseil;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Motcle", inversedBy="numconseil")
-     * @ORM\JoinTable(name="rechercher",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="NUMCONSEIL", referencedColumnName="NUMCONSEIL")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="NUMMOTCLE", referencedColumnName="NUMMOTCLE")
-     *   }
-     * )
-     */
-    private $nummotcle = array();
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Produit", inversedBy="numconseil")
-     * @ORM\JoinTable(name="selectionner",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="NUMCONSEIL", referencedColumnName="NUMCONSEIL")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="REFPROD", referencedColumnName="REFPROD")
-     *   }
-     * )
-     */
-    private $refprod = array();
-
-    /**
-     * Constructor
-     */
-    public function __construct()
+    public function __construct(ManagerRegistry $registry)
     {
-        $this->nummotcle = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->refprod = new \Doctrine\Common\Collections\ArrayCollection();
+        parent::__construct($registry, Conseil::class);
     }
 
+    public function save(Conseil $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(Conseil $entity, bool $flush = false): void
+    {
+        //dd($this->getEntityManager());
+        $this->getEntityManager()->remove($entity);
+        
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+//    /**
+//     * @return Conseil[] Returns an array of Conseil objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('c.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
+
+//    public function findOneBySomeField($value): ?Conseil
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
 }

@@ -2,73 +2,66 @@
 
 namespace App\Repository;
 
-use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Utilisateur;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * Utilisateur
+ * @extends ServiceEntityRepository<Utilisateur>
  *
- * @ORM\Table(name="utilisateur")
- * @ORM\Entity
+ * @method Utilisateur|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Utilisateur|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Utilisateur[]    findAll()
+ * @method Utilisateur[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class Utilisateur
+class UtilisateurRepository extends ServiceEntityRepository
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="ID", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, Utilisateur::class);
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="NOMCLI", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $nomcli;
+    public function save(Utilisateur $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="PRENOMCLI", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $prenomcli;
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="MAILCLI", type="string", length=50, nullable=true, options={"fixed"=true})
-     */
-    private $mailcli;
+    public function remove(Utilisateur $entity, bool $flush = false): void
+    {
+        //dd($this->getEntityManager());
+        $this->getEntityManager()->remove($entity);
+        
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="PASSCLI", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $passcli;
+//    /**
+//     * @return Utilisateur[] Returns an array of Utilisateur objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('u')
+//            ->andWhere('u.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('u.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="ADRCLI", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $adrcli;
-
-    /**
-     * @var int|null
-     *
-     * @ORM\Column(name="CPCLI", type="integer", nullable=true)
-     */
-    private $cpcli;
-
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="VILLECLI", type="string", length=32, nullable=true, options={"fixed"=true})
-     */
-    private $villecli;
-
-
+//    public function findOneBySomeField($value): ?Utilisateur
+//    {
+//        return $this->createQueryBuilder('u')
+//            ->andWhere('u.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
 }
