@@ -97,13 +97,28 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
         }
         echo "\">Contact</a>
 \t\t\t\t</li>
-
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"";
-        // line 35
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexion.index");
-        echo "\">Connexion</a>
-\t\t\t\t</li>
+\t\t\t\t
+\t\t\t\t";
+        // line 34
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34)) {
+            // line 35
+            echo "                    <li><a class=\"nav-link scrollto\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">
+                        Déconnexion
+                    </a></li>
+                ";
+        } else {
+            // line 39
+            echo "                    <li><a class=\"nav-link scrollto\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\">
+                        Connexion
+                    </a></li>
+                ";
+        }
+        // line 43
+        echo "
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
 \t\t</nav>
@@ -133,7 +148,7 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 
     public function getDebugInfo()
     {
-        return array (  104 => 35,  92 => 31,  80 => 27,  74 => 24,  68 => 21,  61 => 17,  43 => 1,);
+        return array (  121 => 43,  113 => 39,  105 => 35,  103 => 34,  92 => 31,  80 => 27,  74 => 24,  68 => 21,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -170,10 +185,17 @@ class __TwigTemplate_9d579cf2073e4a6dcf7145e620040e68 extends Template
 \t\t\t\t<li>
 \t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{% if modifHeader is defined %}{{path('accueil.index')}}#contact{% else %} #contact {% endif %}\">Contact</a>
 \t\t\t\t</li>
+\t\t\t\t
+\t\t\t\t{% if app.user %}
+                    <li><a class=\"nav-link scrollto\" href=\"{{ path('app_logout') }}\">
+                        Déconnexion
+                    </a></li>
+                {% else %}
+                    <li><a class=\"nav-link scrollto\" href=\"{{ path('app_login') }}\">
+                        Connexion
+                    </a></li>
+                {% endif %}
 
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"nav-link scrollto\" href=\"{{path('connexion.index')}}\">Connexion</a>
-\t\t\t\t</li>
 \t\t\t</ul>
 \t\t\t<i class=\"bi bi-list mobile-nav-toggle\"></i>
 \t\t</nav>

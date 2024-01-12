@@ -84,15 +84,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUtilisateur(?Utilisateur $utilisateur): self
     {
         $this->utilisateur = $utilisateur;
-        if($utilisateur->getNumDroit()->getNumDroit() == 1) {
-            $roles = $this->roles;
-            $roles[] = 'ROLE_ADMIN';
-            $this->setRoles($roles);
-        } else {
-            $this->getRoles();
-        }
 
-        $this->password = $utilisateur->getMdp();
+        $this->getRoles();
+
+        $this->password = $utilisateur->getPasscli();
 
         return $this;
     }

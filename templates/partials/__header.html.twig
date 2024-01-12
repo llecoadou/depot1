@@ -30,10 +30,17 @@
 				<li>
 					<a class="nav-link scrollto" href="{% if modifHeader is defined %}{{path('accueil.index')}}#contact{% else %} #contact {% endif %}">Contact</a>
 				</li>
+				
+				{% if app.user %}
+                    <li><a class="nav-link scrollto" href="{{ path('app_logout') }}">
+                        Déconnexion
+                    </a></li>
+                {% else %}
+                    <li><a class="nav-link scrollto" href="{{ path('app_login') }}">
+                        Connexion
+                    </a></li>
+                {% endif %}
 
-				<li>
-					<a class="nav-link scrollto" href="{{path('connexion.index')}}">Connexion</a>
-				</li>
 			</ul>
 			<i class="bi bi-list mobile-nav-toggle"></i>
 		</nav>
