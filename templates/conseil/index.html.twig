@@ -4,67 +4,86 @@
 {% endblock %}
 {% block main %}
 	<!-- ======= Conseil Section ======= -->
-	<section id="conseil">
-		<div class="container" data-aos="fade-up">
+	{#{{dump(lesConseils)}}#}
+		<section id="conseil"> <div class="container" data-aos="fade-up">
 			<div class="section-header">
 				<h2>Services</h2>
-				<p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
-			</div>
+				<p>Bienvenue sur notre page dédiée aux conseils pour les animaux ! 🐾</p>
 
-			<div class="row gy-4">
+				<p>Nous sommes passionnés par le bien-être des animaux et nous sommes ravis de partager avec vous des conseils pratiques, des informations utiles et des astuces pour prendre soin de vos compagnons à quatre pattes. Que vous soyez un propriétaire attentif, un amoureux des animaux ou simplement curieux, vous trouverez ici une mine d'informations pour assurer une vie heureuse et épanouissante à vos amis à fourrure, plumes ou écailles.</p>
+				<p>
 
+					Notre équipe d'experts, composée de vétérinaires, de comportementalistes animaliers et de passionnés d'animaux, travaille ensemble pour vous fournir des conseils fondés sur des connaissances actualisées et des approches bienveillantes. Que ce soit pour la nutrition, l'éducation, la santé, ou tout simplement pour renforcer le lien spécial qui vous lie à votre animal, nous sommes là pour vous guider à chaque étape.
+				</p>
+				<p>
+					Parcourez nos articles, guides et vidéos pour découvrir des recommandations pratiques, des témoignages inspirants et des nouvelles tendances dans le monde des animaux de compagnie. N'hésitez pas à poser vos questions, partager vos expériences et interagir avec notre communauté engagée.
+				</p>
+				<p>
+					Ensemble, créons un environnement où les animaux sont choyés, respectés et aimés comme ils le méritent. Merci de faire partie de notre communauté dévouée à la vie heureuse et saine de nos fidèles compagnons ! 🐶🐱🐰🦜</p>
+			</p>
+		</div>
+
+		<div class="row gy-4">
+			{% for leConseil in lesConseils%}
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="box">
 						<div class="icon">
-							<i class="bi bi-briefcase"></i>
+							<i class="bi bi-award-fill"></i>
 						</div>
 						<h4 class="title">
-							<a href="">Lorem Ipsum</a>
+							{{ leConseil.descconseil }}
 						</h4>
-						<p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
-					</div>
-				</div>
-
-				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-					<div class="box">
-						<div class="icon">
-							<i class="bi bi-card-checklist"></i>
+						<div style="display:flex">
+							{% for unproduit in leConseil.refprod %}
+								<a href="">
+									<article style="margin:10px;border:1px solid blue; border-radius:3px"><img alt="LeProduit"/>
+										<h4>{{unproduit.libelleprod}}</h4>
+									</article>
+								</a>
+							{% endfor %}
 						</div>
-						<h4 class="title">
-							<a href="">Dolor Sitema</a>
-						</h4>
-						<p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera clas.</p>
 					</div>
 				</div>
-
-				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-					<div class="box">
-						<div class="icon">
-							<i class="bi bi-bar-chart"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Sed ut perspiciatis</a>
-						</h4>
-						<p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur trinige zareta lobur trade.</p>
-					</div>
-				</div>
-
-				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-					<div class="box">
-						<div class="icon">
-							<i class="bi bi-binoculars"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Magni Dolores</a>
-						</h4>
-						<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum rideta zanox satirente madera</p>
-					</div>
-				</div>
-
-			</div>
-
+			{% endfor %}
+			<!--<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+																																														<div class="box">
+																																															<div class="icon">
+																																																<i class="bi bi-card-checklist"></i>
+																																															</div>
+																																															<h4 class="title">
+																																																<a href="">Dolor Sitema</a>
+																																															</h4>
+																																															<p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera clas.</p>
+																																														</div>
+																																													</div>
+																																									
+																																													<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+																																														<div class="box">
+																																															<div class="icon">
+																																																<i class="bi bi-bar-chart"></i>
+																																															</div>
+																																															<h4 class="title">
+																																																<a href="">Sed ut perspiciatis</a>
+																																															</h4>
+																																															<p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur trinige zareta lobur trade.</p>
+																																														</div>
+																																													</div>
+																																									
+																																													<div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+																																														<div class="box">
+																																															<div class="icon">
+																																																<i class="bi bi-binoculars"></i>
+																																															</div>
+																																															<h4 class="title">
+																																																<a href="">Magni Dolores</a>
+																																															</h4>
+																																															<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum rideta zanox satirente madera</p>
+																																														</div>
+																																													</div>
+																																									-->
 		</div>
-	</section>
-	<!-- End Services Section -->
-{% endblock %}
-{% block footer %}{% endblock %}
+
+	</div>
+</section>
+#}
+<!-- End Services Section -->{% endblock %}{% block footer %}{% endblock %}

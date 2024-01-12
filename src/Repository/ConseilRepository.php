@@ -40,6 +40,16 @@ class ConseilRepository extends ServiceEntityRepository
         }
     }
 
+    public function getLeConseil($value): array
+    {
+        return $this->createQueryBuilder('c')
+            ->orderBy('c.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Conseil[] Returns an array of Conseil objects
 //     */
