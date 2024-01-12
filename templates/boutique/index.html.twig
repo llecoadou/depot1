@@ -3,36 +3,16 @@
 {% block title %}Boutique
 {% endblock %}
 {% block main %}
-	{{dump(lesProduits)}}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
+	{{ dump(lesCategories)}}
+	{% for laCategorie in lesCategories %}
 
-	<div id="boutique" class="example-wrapper">
-		<h1>Nos Produits KAL</h1>
+		<article class="col-md-3 col-12 col-sm-12" style="height:200px;border:2px solid black;border-radius:5px;margin:10px; background-color:orange">
 
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ 'C:/wamp64/www/ap/kal/depot1/src/Controller/ProduitController.php'|file_link(0) }}">src/Controller/ProduitController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ 'C:/wamp64/www/ap/kal/depot1/templates/produit/index.html.twig'|file_link(0) }}">templates/produit/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
-	</div>
-
+			<a style="color:black" href="{{ path('boutique.liste',{id:laCategorie.refcat})}}">
+				<div class="text-center" style="width:100%;height:100%;padding-top:5em">
+					{{laCategorie.libcat}}
+				</div>
+			</a>
+		</article>
+	{% endfor %}
 {% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ephad Discount : Detail
+{% endblock %}
+
+{% block main %}
+	{#{{ dump(leProduit)}}#}
+	<h1 class="col-12 text-center">{{leProduit.libelleprod}}
+		en détail...
+	</h1>
+	<div class="col-12">
+
+
+		<article class="col-12 text-center">
+			<p>
+				<a href=""><img src="{{ asset('asset/img/'~ leProduit.image)}}" width="50%" style="border:2px solid black;border-radius:4px"/>
+				</a>
+			</p>
+
+			<p>{{leProduit.description |raw}}
+			</p>
+
+			<p>
+				<b>Prix à payer :
+					{{leProduit.libelleprod}}€</b>
+			</p>
+
+		</article>
+		<script>
+			document.querySelector('article').addEventListener('click', function (e) {
+e.preventDefault();
+
+fetch("{{ path ('panier.ajouter', {id:leProduit.reference}) }}").then(response => response.json()).then(data => {
+if (data.success) {
+document.querySelector('.panier').innerHTML = 'Panier(                {{ app.session.get('produitTotal','0')+1 }})';
+alert('Le produit                 {{ leProduit.libelleprod }}ajouté au panier avec succès !');
+} else {
+alert('Le produit                 {{ leProduit.libelleprod }}est déjà dans le panier !');
+}
+}).catch(error => {
+console.error('Erreur Ajax :', error);
+});
+
+});
+		</script>
+
+
+	</div>
+{% endblock %}
