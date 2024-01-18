@@ -492,6 +492,6 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
     </section><!-- End Testimonials Section -->
 
 {% endblock %}
-", "accueil/index.html.twig", "C:\\wamp64\\www\\ap\\kal\\depot1\\templates\\accueil\\index.html.twig");
+", "accueil/index.html.twig", "C:\\wamp64\\www\\Ap\\Projet\\depot1\\templates\\accueil\\index.html.twig");
     }
 }
