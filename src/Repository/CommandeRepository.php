@@ -21,6 +21,17 @@ class CommandeRepository extends ServiceEntityRepository
         parent::__construct($registry, Commande::class);
     }
 
+    public function findLast(): ?Commande
+    {
+        return $this->createQueryBuilder('c')
+
+        ->orderBy('c.numcom', 'DESC')
+        ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+
     public function save(Commande $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste
+{% endblock %}
+
+{% block main %}
+	<h1 class="col-12">Les produits :
+		{{laCategorie.libcat}}
+	</h1>
+
+	<h3>
+		{% if lesProduits == null %}
+			{% set isset = 0 %}
+			<p>Il n'y pas de produit</p>
+		{% else %}
+			{% set isset = 1 %}
+		{% endif %}
+	</h3>
+	<div class="col-12 text-left">
+		<div class="row">
+			{% if isset != 0 %}
+				{% for leProduit in lesProduits %}
+
+					<article class="col-3">
+						<p>
+							<a href="{{ path('boutique.detail',{id:leProduit.refprod})}}"><img src="{{ asset('asset/img/'~ leProduit.image)}}" width="300px" style="border:2px solid black;border-radius:4px"/></a>
+						</p>
+						<p>{{leProduit.libelleprod}}</p>
+						<p>{{leProduit.prixprod}}€</p>
+					</article>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

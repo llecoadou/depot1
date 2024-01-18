@@ -40,6 +40,27 @@ class CategorieRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+      * @return Categorie[] Returns an array of Categorie objects
+      */
+      public function findAll(): array
+      {
+          return $this->createQueryBuilder('c')
+              ->getQuery()
+              ->getResult()
+          ;
+      }
+
+      public function findByNumero($value): ?Categorie
+    {
+        return $this->createQueryBuilder('c')
+             ->andWhere('c.refcat = :val')
+             ->setParameter('val', $value)
+             ->getQuery()
+             ->getOneOrNullResult()
+        ;
+    }
+
 //    /**
 //     * @return Categorie[] Returns an array of Categorie objects
 //     */

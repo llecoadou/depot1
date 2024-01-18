@@ -34,4 +34,11 @@
 		</ul>
 	</div>
 
+			<a style="color:black" href="{{ path('boutique.liste',{id:laCategorie.refcat})}}">
+				<div class="text-center" style="width:100%;height:100%;padding-top:5em">
+					{{laCategorie.libcat}}
+				</div>
+			</a>
+		</article>
+	{% endfor %}
 {% endblock %}

@@ -11,6 +11,7 @@ class AccueilController extends AbstractController
     #[Route('/', name: 'accueil.index', methods:['GET'])]
     public function index(): Response
     {
+<<<<<<< HEAD
         /*$contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
@@ -24,6 +25,8 @@ class AccueilController extends AbstractController
             $message= 'Contact correctement enregistrée !';
 
         }*/
+=======
+>>>>>>> 0d5258580595446fe6fb24e8023be336c4c8df3c
         return $this->render('accueil/index.html.twig', [
             'controller_name' => 'AccueilController',
         ]);

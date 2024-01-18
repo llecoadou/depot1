@@ -48,7 +48,7 @@ class Produit
     /**
      * @var string|null
      *
-     * @ORM\Column(name="IMAGE", type="blob", length=0, nullable=true)
+     * @ORM\Column(name="IMAGE", type="string", length=0, nullable=true)
      */
     private $image;
 
@@ -126,7 +126,7 @@ class Produit
         return $this;
     }
 
-    public function getImage()
+    public function getImage(): ?string
     {
         return $this->image;
     }
