@@ -21,6 +21,7 @@ return [
         '/contact' => [[['_route' => 'contact.index', '_controller' => 'App\\Controller\\ContactController::index'], null, ['GET' => 0], null, false, false, null]],
         '/paiement' => [[['_route' => 'paiement.index', '_controller' => 'App\\Controller\\PaiementController::index'], null, ['GET' => 0], null, false, false, null]],
         '/panier' => [[['_route' => 'panier.index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/panier/commande' => [[['_route' => 'panier.commande', '_controller' => 'App\\Controller\\PanierController::commande'], null, ['GET' => 0, 'POST' => 1], null, true, false, null]],
         '/boutique' => [[['_route' => 'boutique.index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
         '/profil' => [[['_route' => 'profil.index', '_controller' => 'App\\Controller\\ProfilController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/recherche' => [[['_route' => 'recherche.index', '_controller' => 'App\\Controller\\RechercheController::index'], null, ['GET' => 0], null, false, false, null]],
@@ -46,9 +47,13 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/panier/(?'
+                    .'|ajouter/([^/]++)(*:196)'
+                    .'|supprimer/([^/]++)(*:222)'
+                .')'
                 .'|/boutique/(?'
-                    .'|liste/([^/]++)(*:196)'
-                    .'|detail/([^/]++)(*:219)'
+                    .'|liste/([^/]++)(*:258)'
+                    .'|detail/([^/]++)(*:281)'
                 .')'
             .')/?$}sDu',
     ],
@@ -60,8 +65,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        196 => [[['_route' => 'boutique.liste', '_controller' => 'App\\Controller\\ProduitController::liste'], ['id'], ['GET' => 0], null, false, true, null]],
-        219 => [
+        196 => [[['_route' => 'panier.ajouter', '_controller' => 'App\\Controller\\PanierController::ajouter'], ['id'], ['GET' => 0], null, false, true, null]],
+        222 => [[['_route' => 'panier.supprimer', '_controller' => 'App\\Controller\\PanierController::supprimer'], ['id'], ['GET' => 0], null, false, true, null]],
+        258 => [[['_route' => 'boutique.liste', '_controller' => 'App\\Controller\\ProduitController::liste'], ['id'], ['GET' => 0], null, false, true, null]],
+        281 => [
             [['_route' => 'boutique.detail', '_controller' => 'App\\Controller\\ProduitController::detail'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

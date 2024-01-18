@@ -25,7 +25,7 @@ class Commande
     private $numcom;
 
     /**
-     * @var \DateTime|null
+     * @var \DateTime
      *
      * @ORM\Column(name="DATECOM", type="datetime", nullable=true)
      */
@@ -62,6 +62,7 @@ class Commande
     public function __construct()
     {
         $this->refprod = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->datecom = new \DateTime('now');
     }
 
     public function getNumcom(): ?string

@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ephad Discount : Liste
+{% block title %}Liste
 {% endblock %}
 
 {% block main %}
 	<h1 class="col-12">Les produits :
 		{{laCategorie.libcat}}
-		de l'ehpad Discount :</h1>
+	</h1>
 
 	<h3>
 		{% if lesProduits == null %}
@@ -20,12 +20,13 @@
 		<div class="row">
 			{% if isset != 0 %}
 				{% for leProduit in lesProduits %}
+
 					<article class="col-3">
 						<p>
 							<a href="{{ path('boutique.detail',{id:leProduit.refprod})}}"><img src="{{ asset('asset/img/'~ leProduit.image)}}" width="300px" style="border:2px solid black;border-radius:4px"/></a>
 						</p>
 						<p>{{leProduit.libelleprod}}</p>
-						<p>{{leProduit.prixprod}}</p>
+						<p>{{leProduit.prixprod}}€</p>
 					</article>
 				{% endfor %}
 			{% endif %}
