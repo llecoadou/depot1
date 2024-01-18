@@ -15,7 +15,7 @@ class ProduitController extends AbstractController
     public function index(CategorieRepository $categorieRepository): Response
     {
         $lesCategories =$categorieRepository->findAll();
-        //dd($lesCategories);
+        //dd($lesCategories)s;
         return $this->render('boutique/index.html.twig', [
             'lesCategories' => $lesCategories
         ]);
