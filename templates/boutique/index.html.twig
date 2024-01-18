@@ -3,7 +3,6 @@
 {% block title %}Boutique
 {% endblock %}
 {% block main %}
-	{{dump(lesProduits)}}
 	<style>
 		.example-wrapper {
 			margin: 1em auto;
@@ -23,9 +22,9 @@
 		This friendly message is coming from:
 		<ul>
 			<li>Your controller at
-				<code>
-					<a href="{{ 'C:/wamp64/www/ap/kal/depot1/src/Controller/ProduitController.php'|file_link(0) }}">src/Controller/ProduitController.php</a>
-				</code>
+				<p>
+					<img src="{{asset('asset/img/jouetsChien1.jpg')}}>
+				</p>
 			</li>
 			<li>Your template at
 				<code>

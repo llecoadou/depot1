@@ -250,36 +250,9 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
         <iframe src=\"https://maps.app.goo.gl/6Nu1HYso8oaYfYnd9\" width=\"100%\" height=\"380\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
       </div>
 
-      <div class=\"container\">
-        <div class=\"form\">
-          <form action=\"forms/contact.php\" method=\"post\" role=\"form\" class=\"php-email-form\">
-            <div class=\"row\">
-              <div class=\"form-group col-md-6\">
-                <input type=\"text\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Votre Nom\" required>
-              </div>
-              <div class=\"form-group col-md-6 mt-3 mt-md-0\">
-                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Votre mail\" required>
-              </div>
-            </div>
-            <div class=\"form-group mt-3\">
-              <input type=\"text\" class=\"form-control\" name=\"subject\" id=\"subject\" placeholder=\"Sujet\" required>
-            </div>
-            <div class=\"form-group mt-3\">
-              <textarea class=\"form-control\" name=\"message\" rows=\"5\" placeholder=\"Message\" required></textarea>
-            </div>
-
-            <div class=\"my-3\">
-              <div class=\"loading\">Chargement</div>
-              <div class=\"error-message\"></div>
-              <div class=\"sent-message\">Votre message a été envoyé. Merci beaucoup !</div>
-            </div>
-
-            <div class=\"text-center\"><button type=\"submit\">Envoyer</button></div>
-          </form>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
+      ";
+        // line 196
+        echo "    </section><!-- End Contact Section -->
 
           </div>
           <div class=\"swiper-pagination\"></div>
@@ -309,7 +282,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  255 => 196,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -481,7 +454,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
         <iframe src=\"https://maps.app.goo.gl/6Nu1HYso8oaYfYnd9\" width=\"100%\" height=\"380\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
       </div>
 
-      <div class=\"container\">
+      {#<div class=\"container\">
         <div class=\"form\">
           <form action=\"forms/contact.php\" method=\"post\" role=\"form\" class=\"php-email-form\">
             <div class=\"row\">
@@ -508,8 +481,7 @@ class __TwigTemplate_ca25b58a105e31a1d27757a2476a5ef6 extends Template
             <div class=\"text-center\"><button type=\"submit\">Envoyer</button></div>
           </form>
         </div>
-
-      </div>
+      </div>#}
     </section><!-- End Contact Section -->
 
           </div>

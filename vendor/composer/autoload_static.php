@@ -72,6 +72,7 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\Messenger\\Bridge\\Doctrine\\' => 44,
             'Symfony\\Component\\Messenger\\' => 28,
+            'Symfony\\Component\\Mailer\\Bridge\\Google\\' => 39,
             'Symfony\\Component\\Mailer\\' => 25,
             'Symfony\\Component\\Intl\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
@@ -307,6 +308,10 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
         'Symfony\\Component\\Messenger\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/messenger',
+        ),
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/google-mailer',
         ),
         'Symfony\\Component\\Mailer\\' => 
         array (
@@ -556,7 +561,9 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
         'App\\Controller\\PaiementController' => __DIR__ . '/../..' . '/src/Controller/PaiementController.php',
         'App\\Controller\\PanierController' => __DIR__ . '/../..' . '/src/Controller/PanierController.php',
         'App\\Controller\\ProduitController' => __DIR__ . '/../..' . '/src/Controller/ProduitController.php',
+        'App\\Controller\\ProfilController' => __DIR__ . '/../..' . '/src/Controller/ProfilController.php',
         'App\\Controller\\RechercheController' => __DIR__ . '/../..' . '/src/Controller/RechercheController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\TeamController' => __DIR__ . '/../..' . '/src/Controller/TeamController.php',
         'App\\Entity\\Animal' => __DIR__ . '/../..' . '/src/Entity/Animal.php',
         'App\\Entity\\Categorie' => __DIR__ . '/../..' . '/src/Entity/Categorie.php',
@@ -566,6 +573,14 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
         'App\\Entity\\Produit' => __DIR__ . '/../..' . '/src/Entity/Produit.php',
         'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\AnimalRepository' => __DIR__ . '/../..' . '/src/Repository/AnimalRepository.php',
+        'App\\Repository\\CategorieRepository' => __DIR__ . '/../..' . '/src/Repository/CategorieRepository.php',
+        'App\\Repository\\CommandeRepository' => __DIR__ . '/../..' . '/src/Repository/CommandeRepository.php',
+        'App\\Repository\\ConseilRepository' => __DIR__ . '/../..' . '/src/Repository/ConseilRepository.php',
+        'App\\Repository\\MotcleRepository' => __DIR__ . '/../..' . '/src/Repository/MotcleRepository.php',
+        'App\\Repository\\ProduitRepository' => __DIR__ . '/../..' . '/src/Repository/ProduitRepository.php',
+        'App\\Repository\\UtilisateurRepository' => __DIR__ . '/../..' . '/src/Repository/UtilisateurRepository.php',
+        'App\\Security\\Authenticator' => __DIR__ . '/../..' . '/src/Security/Authenticator.php',
         'App\\Security\\User' => __DIR__ . '/../..' . '/src/Security/User.php',
         'App\\Security\\UserProvider' => __DIR__ . '/../..' . '/src/Security/UserProvider.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
@@ -4569,6 +4584,8 @@ class ComposerStaticInite80e9ed710a210e5b699f119dff4260b
         'Symfony\\Component\\Intl\\Util\\IcuVersion' => __DIR__ . '/..' . '/symfony/intl/Util/IcuVersion.php',
         'Symfony\\Component\\Intl\\Util\\IntlTestHelper' => __DIR__ . '/..' . '/symfony/intl/Util/IntlTestHelper.php',
         'Symfony\\Component\\Intl\\Util\\Version' => __DIR__ . '/..' . '/symfony/intl/Util/Version.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailSmtpTransport' => __DIR__ . '/..' . '/symfony/google-mailer/Transport/GmailSmtpTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailTransportFactory' => __DIR__ . '/..' . '/symfony/google-mailer/Transport/GmailTransportFactory.php',
         'Symfony\\Component\\Mailer\\DataCollector\\MessageDataCollector' => __DIR__ . '/..' . '/symfony/mailer/DataCollector/MessageDataCollector.php',
         'Symfony\\Component\\Mailer\\DelayedEnvelope' => __DIR__ . '/..' . '/symfony/mailer/DelayedEnvelope.php',
         'Symfony\\Component\\Mailer\\Envelope' => __DIR__ . '/..' . '/symfony/mailer/Envelope.php',

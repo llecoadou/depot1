@@ -18,7 +18,7 @@ return [
         '/apropos' => [[['_route' => 'apropos.index', '_controller' => 'App\\Controller\\AproposController::index'], null, ['GET' => 0], null, false, false, null]],
         '/connexion' => [[['_route' => 'connexion.index', '_controller' => 'App\\Controller\\ConnexionController::index'], null, ['GET' => 0], null, false, false, null]],
         '/conseil' => [[['_route' => 'conseil.index', '_controller' => 'App\\Controller\\ConseilController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/contact' => [[['_route' => 'contact.index', '_controller' => 'App\\Controller\\ContactController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/contact' => [[['_route' => 'contact.index', '_controller' => 'App\\Controller\\ContactController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/paiement' => [[['_route' => 'paiement.index', '_controller' => 'App\\Controller\\PaiementController::index'], null, ['GET' => 0], null, false, false, null]],
         '/panier' => [[['_route' => 'panier.index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
         '/boutique' => [[['_route' => 'boutique.index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
